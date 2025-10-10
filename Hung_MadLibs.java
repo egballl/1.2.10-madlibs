@@ -59,7 +59,7 @@ public class Hung_MadLibs {
                 String userWord = input.nextLine();
                 // Replace the first occurrence of the placeholder
                 String placeholder = "<" + wordType + ">";
-                //result = result.replaceFirst(placeholder, userWord);   - change this
+                //result = result.replaceFirst(placeholder, userWord);   - change this later
                 wordCount++;
             } else {
                 break; // No more placeholders
