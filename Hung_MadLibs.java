@@ -11,7 +11,7 @@ public class Hung_MadLibs2{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
-        // Premade story
+        // Premade story (supplied values for testing)
         String defaultS = "Hello, my name is <noun>. Today, I <verb> to the <adjective> store and bought a <adjective> <noun>. On the way home, I saw a <adjective> <noun> that was <verb> by the <noun>. Later, I <verb> with my <adjective> <noun> until the <noun> started to <verb>. It was the most <adjective> day ever!";
         /* Test Cases
         1. The <noun> <verb> across the <adjective> pond
@@ -33,17 +33,18 @@ public class Hung_MadLibs2{
             System.out.println("Ex: The <adjective> <noun> <verb> quickly.\n");
             System.out.print("Enter Your Story: ");
             story = input.nextLine();
+             // Check if story has placeholders
             if (story.indexOf("<") == -1) {
-                System.out.println("Your story has no placeholders!");
+                System.out.println("Your story has no placeholders!"); //if < == -1 (doesn't exist) then return
                 return;
             }
         } else {
             return;
         }
         
-        int startIndex = story.indexOf("<");
+        int startIndex = story.indexOf("<"); // find first opening bracket
         while (startIndex != -1) {
-            int endIndex = story.indexOf(">", startIndex);
+            int endIndex = story.indexOf(">", startIndex); //looks to find an ending bracket
             if (endIndex != -1) {
                 String wordType = story.substring(startIndex + 1, endIndex);
                 System.out.print("Enter a " + wordType + ": ");
