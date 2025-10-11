@@ -2,11 +2,12 @@
  * Hung_MadLibs2.java
  * Mad Libs program that accepts user input for nouns, verbs, and adjectives
  * and inserts them into a story template.
+ * (provided program reader with information about program)
  */
 
 import java.util.Scanner;
 
-public class Hung_MadLibs{
+public class Hung_MadLibs2{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
@@ -34,23 +35,20 @@ public class Hung_MadLibs{
             story = input.nextLine();
             if (story.indexOf("<") == -1) {
                 System.out.println("Your story has no placeholders!");
+                return;
             }
         } else {
-            System.out.println("Invalid Input.");
             return;
         }
         
-        int wordCount = 1;
         int startIndex = story.indexOf("<");
         while (startIndex != -1) {
             int endIndex = story.indexOf(">", startIndex);
-            
             if (endIndex != -1) {
                 String wordType = story.substring(startIndex + 1, endIndex);
-                System.out.print("Enter a " + wordType + " (#" + wordCount + "): ");
+                System.out.print("Enter a " + wordType + ": ");
                 String userWord = input.nextLine();
                 story = story.substring(0, startIndex) + userWord + story.substring(endIndex + 1);
-                wordCount++;
                 startIndex = story.indexOf("<");
             } else {
                 break;
