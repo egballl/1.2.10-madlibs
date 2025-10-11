@@ -7,7 +7,7 @@
 
 import java.util.Scanner;
 
-public class Hung_MadLibs2{
+public class Hung_MadLibs{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
