@@ -47,26 +47,26 @@ This Java program creates an interactive Mad Libs creator that prompts users for
 
 ## Requirements Met:
 #### Program Code
-Display the original story, prompt for user input, modify final story based on input
+- Display the original story, prompt for user input, modify final story based on input
 
-Implements algorithm(s) that process user input
+- Implements algorithm(s) that process user input
 
-Implements algorithm(s) with String methods to parse for the parts of speech to replace
+- Implements algorithm(s) with String methods to parse for the parts of speech to replace
 
-Implements algorithm(s) with String methods to parse for sections to include
+- Implements algorithm(s) with String methods to parse for sections to include
 
-Prompts to keep the user on track
+- Prompts to keep the user on track
 
-Displays the final modified Mad Lib
+- Displays the final modified Mad Lib
 
 #### Documentation
-Provide a program reader with the information about the program
+- Provide a program reader with the information about the program
 
-Comments clearly indicate where program requirements are met
+- Comments clearly indicate where program requirements are met
 
-Supply the program with values for testing
+- Supply the program with values for testing
 
-Use camelCase
+- Use camelCase when appropriate
 
-Variables for Mad Libs and user input
+- Variables for Mad Libs and user input
 
