@@ -1,7 +1,7 @@
 # 1.2.10-madlibs
 
 ## Project Overview
-This Java program creates an interactive Mad Libs game that prompts users for nouns, verbs, and adjectives, then inserts them into a story template to create a humorous final story.
+This Java program creates an interactive Mad Libs creator that prompts users for nouns, verbs, and adjectives, then inserts them into a story template to create a final story.
 
 ## Approach & Implementation
 
