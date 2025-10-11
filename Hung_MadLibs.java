@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class Hung_MadLibs {
+public class Hung_MadLibs2{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
-        // Premade story template (15 words)
-        String defaultStory = "Hello, my name is <noun>. Today, I <verb> to the <adjective> store and bought a <adjective> <noun>. On the way home, I saw a <adjective> <noun> that was <verb> by the <noun>. Later, I <verb> with my <adjective> <noun> until the <noun> started to <verb>. It was the most <adjective> day ever!";
-        System.out.println("Mad Libs 9,000,000!");
+        // Premade story (15 inputs)
+        String defaultS = "Hello, my name is <noun>. Today, I <verb> to the <adjective> store and bought a <adjective> <noun>. On the way home, I saw a <adjective> <noun> that was <verb> by the <noun>. Later, I <verb> with my <adjective> <noun> until the <noun> started to <verb>. It was the most <adjective> day ever!";
+        
         System.out.println("Choose an option:");
         System.out.println("1. Use premade story (15 words)");
         System.out.println("2. Enter your story");
@@ -14,60 +14,41 @@ public class Hung_MadLibs {
         int choice = input.nextInt();
         input.nextLine();
         
-        String selectedStory = "";
-
+        String story = "";
         if (choice == 1) {
-            selectedStory = defaultStory;
+            story = defaultS;
         } else if (choice == 2) {
-            // Allow user to enter their own test case
             System.out.println("Enter your test case below.");
             System.out.println("Use <noun>, <verb>, and <adjective> as placeholders.");
             System.out.println("Ex: The <adjective> <noun> <verb> quickly.\n");
             System.out.print("Your Story: ");
-            selectedStory = input.nextLine();
-            // verify that the story has at least one placeholder
-            if (!selectedStory.contains("<")) {
-                System.out.println("Your story has no placeholders! Adding a default one...");
-                selectedStory += " The <adjective> end!";
+            story = input.nextLine();
+            if (story.indexOf("<") == -1) {
+                System.out.println("Your story has no placeholders!");
             }
         } else {
-            System.out.println("Invalid. Using premade story.");
-            selectedStory = defaultStory;
+            System.out.println("Invalid Input.");
+            return;
         }
         
-        // the story according to user
-        String completedStory = generateStory(selectedStory, input);
-        System.out.println("\nYour Mad Libs Story: ");
-        System.out.println(completedStory);
-        
-    }
-    
-    public static String generateStory(String story, Scanner input) {
-        String result = story;
         int wordCount = 1;
-        
-        // Loop until all placeholders are replaced
-        while (result.contains("<")) {
-            // Find the next placeholder
-            int startIndex = result.indexOf("<");
-            int endIndex = result.indexOf(">", startIndex);
-            if (startIndex != -1 && endIndex != -1) {
-                // the word type (noun, verb, adjective)
-                String wordType = result.substring(startIndex + 1, endIndex);
-                // Prompt user for input
+        int startIndex = story.indexOf("<");
+        while (startIndex != -1) {
+            int endIndex = story.indexOf(">", startIndex);
+            
+            if (endIndex != -1) {
+                String wordType = story.substring(startIndex + 1, endIndex);
                 System.out.print("Enter a " + wordType + " (#" + wordCount + "): ");
                 String userWord = input.nextLine();
-                // Replace the first occurrence of the placeholder
-                //next two lines aren't needed
-                //String placeholder = "<" + wordType + ">";
-                //result = result.replaceFirst(placeholder, userWord);
-                result =  result.substring(0,startIndex) + userWord + result.substring(endIndex + 1); // - change this
+                story = story.substring(0, startIndex) + userWord + story.substring(endIndex + 1);
                 wordCount++;
+                startIndex = story.indexOf("<");
             } else {
                 break;
             }
         }
         
-        return result;
+        System.out.println("\nYour Mad Lib: ");
+        System.out.println(story);
     }
 }
