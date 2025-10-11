@@ -20,10 +20,11 @@ public class Hung_MadLibs{
         System.out.println("Choose an option:");
         System.out.println("1. Use premade story (15 words)");
         System.out.println("2. Enter your story");
-        System.out.print("Enter your choice (1-2): ");
+        System.out.print("Enter your choice (1-2): "); // prompts to keep user on track
         int choice = input.nextInt();
         input.nextLine();
         
+        //Process the user input for selection
         String story = "";
         if (choice == 1) {
             story = defaultS;
@@ -46,16 +47,16 @@ public class Hung_MadLibs{
         while (startIndex != -1) {
             int endIndex = story.indexOf(">", startIndex); //looks to find an ending bracket
             if (endIndex != -1) {
-                String wordType = story.substring(startIndex + 1, endIndex);
+                String wordType = story.substring(startIndex + 1, endIndex); // parse for part of speech (noun/verb/adjective)
                 System.out.print("Enter a " + wordType + ": ");
                 String userWord = input.nextLine();
-                story = story.substring(0, startIndex) + userWord + story.substring(endIndex + 1);
+                story = story.substring(0, startIndex) + userWord + story.substring(endIndex + 1); //replace placeholder with user input
                 startIndex = story.indexOf("<");
             } else {
                 break;
             }
         }
         
-        System.out.println("\nYour Mad Lib: " + story);
+        System.out.println("\nYour Mad Lib: " + story); //display final modified mad lib
     }
 }
