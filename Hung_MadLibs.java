@@ -2,7 +2,6 @@
  * Hung_MadLibs2.java
  * Mad Libs program that accepts user input for nouns, verbs, and adjectives
  * and inserts them into a story template.
- * (provided program reader with information about program)
  */
 
 import java.util.Scanner;
