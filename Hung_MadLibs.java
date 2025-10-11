@@ -56,7 +56,6 @@ public class Hung_MadLibs{
             }
         }
         
-        System.out.println("\nYour Mad Lib: ");
-        System.out.println(story);
+        System.out.println("\nYour Mad Lib: " + story);
     }
 }
