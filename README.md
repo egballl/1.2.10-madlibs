@@ -33,7 +33,30 @@ This Java program creates an interactive Mad Libs creator that prompts users for
 - Finalized user prompts and output formatting
 
 ## Test Cases - Screenshots
-### Screenshot 1: Assignment Test Case: 
+### Screenshot 1: Given Assignment Test Case: 
 ##### The \<noun> \<verb> across the \<adjective> pond
 <img width="1523" height="747" alt="Screenshot_923" src="https://github.com/user-attachments/assets/968dd2d9-985b-4ff0-8086-579ff5b2be22" />
 
+### Screenshot 2: Given Assignment Test Case: 
+##### I went to the zoo to see a \<noun>. There were people \<verb> around the enclosure which made the \<adjective> apes go bananas.
+<img width="1534" height="849" alt="Screenshot_924" src="https://github.com/user-attachments/assets/5ad7afe7-9612-4074-9194-795e17d32156" />
+
+### Screenshot 3: Premade (Custom) Test Case: 
+##### Hello, my name is \<noun>. Today, I \<verb> to the \<adjective> store and bought a \<adjective> \<noun>. On the way home, I saw a \<adjective> \<noun> that was \<verb> by the \<noun>. Later, I \<verb> with my \<adjective> \<noun> until the \<noun> started to \<verb>. It was the most \<adjective> day ever!
+<img width="1578" height="636" alt="Screenshot_925" src="https://github.com/user-attachments/assets/e02897a4-2e1a-4cc9-8310-2eca0dccdfb1" />
+
+## Requirements Met:
+#### Program Code
+Display the original story, prompt for user input, modify final story based on input
+Implements algorithm(s) that process user input
+Implements algorithm(s) with String methods to parse for the parts of speech to replace
+Implements algorithm(s) with String methods to parse for sections to include
+Prompts to keep the user on track
+Displays the final modified Mad Lib
+
+#### Documentation
+Provide a program reader with the information about the program
+Comments clearly indicate where program requirements are met
+Supply the program with values for testing
+Use camelCase
+Variables for Mad Libs and user input
