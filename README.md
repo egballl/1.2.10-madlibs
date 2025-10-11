@@ -34,6 +34,6 @@ This Java program creates an interactive Mad Libs creator that prompts users for
 
 ## Test Cases - Screenshots
 ### Screenshot 1: Assignment Test Case: 
-##### The <noun> <verb> across the <adjective> pond
+##### The \<noun> \<verb> across the \<adjective> pond
 <img width="1523" height="747" alt="Screenshot_923" src="https://github.com/user-attachments/assets/968dd2d9-985b-4ff0-8086-579ff5b2be22" />
 
