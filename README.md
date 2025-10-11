@@ -17,19 +17,19 @@ This Java program creates an interactive Mad Libs creator that prompts users for
 - Used `Scanner` to collect user input
 - Added input validation to check for placeholders
 
-#### Milestone 3: String Parsing Algorithm
-- Developed algorithm using `indexOf()` to locate placeholders
+#### Milestone 3: String Parsing
+- Used `indexOf()` to locate placeholders
 - Used `substring()` methods to extract word types
-- Implemented loop to process all placeholders sequentially
+- Implemented loop to process placeholders
 
 #### Milestone 4: Story Reconstruction
-- Built algorithm to replace placeholders with user input
+- Built an algorithm to replace placeholders with user input
 - Reconstructed story using string concatenation
-- Preserved original story structure while inserting user words
+- Preserved original story structure while inserting the users input
 
-#### Milestone 5: Testing & Refinement
+#### Milestone 5: Refinement
 - Tested with multiple story templates
-- Added error handling for edge cases
+- Added basic error handling
 - Finalized user prompts and output formatting
 
 ## Test Cases (3)
