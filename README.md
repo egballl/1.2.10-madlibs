@@ -7,12 +7,12 @@ This Java program creates an interactive Mad Libs creator that prompts users for
 
 ### Milestones
 
-#### Milestone 1: Story Template Setup
+#### Milestone 1: Story Template
 - Created a premade story template with 15 placeholders
 - Used `<noun>`, `<verb>`, and `<adjective>` as placeholder format
 - Added predefined test cases from the assignment for validation
 
-#### Milestone 2: User Input Processing
+#### Milestone 2: User Input
 - Implemented menu system for story selection (premade vs custom)
 - Used `Scanner` to collect user input
 - Added input validation to check for placeholders
@@ -62,7 +62,7 @@ This Java program creates an interactive Mad Libs creator that prompts users for
 #### Documentation
 - Provide a program reader with the information about the program
 
-- Comments clearly indicate where program requirements are met
+- Comments indicate where program requirements are met
 
 - Supply the program with values for testing
 
