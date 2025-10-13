@@ -33,7 +33,7 @@ This Java program creates an interactive Mad Libs creator that prompts users for
 - Finalized user prompts and output formatting
 
 ## Code Logic and Approach
-The program's core functionality is built around iteration that finds placeholder text (ex: \<noun>) and replaces it with user input using Java's built-in String methods such as indexOf(), substring(), and string concatenation.
+The program's core functionality is built around iteration that finds placeholder text (ex: `\<noun>`) and replaces it with user input using Java's built-in String methods such as `indexOf()`, `substring()`, and string concatenation.
 ### Code Snippet
 <img width="789" height="342" alt="image" src="https://github.com/user-attachments/assets/cce7d432-8a40-41d1-b54a-15339db83113" />
 
